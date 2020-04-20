@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MoveLah</string>
+    <string name="sign_in"><u>Sign In</u></string>
+    <string name="i_have_an_account"><u>Already have an account</u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
