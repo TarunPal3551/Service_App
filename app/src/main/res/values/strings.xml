@@ -5,4 +5,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="weight_8kg"><![CDATA[(Weight<8KG)]]></string>
+    <string name="weight_20kg"><![CDATA[(Weight<20KG)]]></string>
+    <string name="weight__20kg"><![CDATA[(Weight>20KG)]]></string>
+    <string name="view_more"><u>View more</u></string>
 </resources>

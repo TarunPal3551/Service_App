@@ -129,7 +129,9 @@
                 android:text="Sign up"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:cornerRadius="20dp"></com.google.android.material.button.MaterialButton>
+                app:cornerRadius="20dp">
+
+            </com.google.android.material.button.MaterialButton>
 
             <LinearLayout
                 android:id="@+id/SignUplayout"

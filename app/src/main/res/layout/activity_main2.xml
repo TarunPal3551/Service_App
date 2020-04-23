@@ -22,61 +22,69 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPickUpLocatio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/border_grey"
-            android:drawableStart="@drawable/ic_my_location_black_24dp"
-            android:drawableLeft="@drawable/ic_my_location_black_24dp"
-            android:drawablePadding="10dp"
-            android:drawableTint="@color/colorPrimary"
-            android:hint="Select PickUp Location"
-            android:padding="10dp">
-
-        </com.google.android.material.textfield.TextInputEditText>
-
         <LinearLayout
-            android:id="@+id/line1"
-            android:layout_width="1dp"
-            android:layout_height="30dp"
-            android:layout_below="@id/editTextPickUpLocatio"
-            android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/rectange_top_corners"
-            android:orientation="vertical">
-
-        </LinearLayout>
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextDropLocation1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/line1"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/border_grey"
-            android:drawableStart="@drawable/ic_location_searching_black_24dp"
-            android:drawableLeft="@drawable/ic_location_searching_black_24dp"
-            android:drawablePadding="10dp"
-            android:drawableTint="@color/colorPrimary"
-            android:hint="Select Drop Location"
-            android:padding="10dp">
+            android:orientation="vertical"
+            android:id="@+id/lay1">
 
-        </com.google.android.material.textfield.TextInputEditText>
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPickUpLocatio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/border_grey"
+                android:drawableStart="@drawable/ic_my_location_black_24dp"
+                android:drawableLeft="@drawable/ic_my_location_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorPrimary"
+                android:hint="Select PickUp Location"
+                android:padding="10dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/editTextPickUpLocatio"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rectange_top_corners"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDropLocation1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/border_grey"
+                android:drawableStart="@drawable/ic_location_searching_black_24dp"
+                android:drawableLeft="@drawable/ic_location_searching_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorPrimary"
+                android:hint="Select Drop Location"
+                android:padding="10dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </LinearLayout>
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_below="@id/editTextDropLocation1"
+            android:layout_below="@id/lay1"
             android:layout_alignParentRight="true"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="@color/colorPrimary"
             android:text="Add Multiple Location">
 
         </com.google.android.material.button.MaterialButton>
@@ -84,15 +92,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextDropLocation1"
+            android:layout_below="@id/lay1"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="15dp"
                 android:text="Vehicle Type"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp"
@@ -104,12 +112,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/border_grey"
                 android:orientation="horizontal"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:weightSum="3">
 
                 <LinearLayout
@@ -147,7 +155,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="(Weight<8KG)">
+                        android:text="@string/weight_8kg">
 
                     </TextView>
                 </LinearLayout>
@@ -187,7 +195,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="(Weight<20KG)">
+                        android:text="@string/weight_20kg">
 
                     </TextView>
                 </LinearLayout>
@@ -227,7 +235,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="(Weight>20KG)">
+                        android:text="@string/weight__20kg">
 
                     </TextView>
                 </LinearLayout>
