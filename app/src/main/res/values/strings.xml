@@ -9,4 +9,6 @@
     <string name="weight_20kg"><![CDATA[(Weight<20KG)]]></string>
     <string name="weight__20kg"><![CDATA[(Weight>20KG)]]></string>
     <string name="view_more"><u>View more</u></string>
+    <string name="google_maps_key">AIzaSyDL_8xYyld0xDk21N-IcYXnKZsIXGX2BqY</string>
+
 </resources>

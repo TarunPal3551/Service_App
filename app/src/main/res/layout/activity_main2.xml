@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Main2Activity">
 
+
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -17,233 +18,226 @@
 
     </com.google.android.material.appbar.MaterialToolbar>
 
-    <RelativeLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar">
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
 
-        <LinearLayout
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/lay1">
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextPickUpLocatio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/border_grey"
-                android:drawableStart="@drawable/ic_my_location_black_24dp"
-                android:drawableLeft="@drawable/ic_my_location_black_24dp"
-                android:drawablePadding="10dp"
-                android:drawableTint="@color/colorPrimary"
-                android:hint="Select PickUp Location"
-                android:padding="10dp">
-
-            </com.google.android.material.textfield.TextInputEditText>
+            android:layout_height="match_parent"
+            android:paddingBottom="150dp">
 
             <LinearLayout
-                android:id="@+id/line1"
-                android:layout_width="1dp"
-                android:layout_height="30dp"
-                android:layout_below="@id/editTextPickUpLocatio"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="2dp"
-                android:background="@drawable/rectange_top_corners"
+                android:id="@+id/lay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+
+                <TextView
+                    android:id="@+id/editTextPickUpLocatio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/border_grey"
+                    android:drawableStart="@drawable/ic_my_location_black_24dp"
+                    android:drawableLeft="@drawable/ic_my_location_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:hint="Select PickUp Location"
+                    android:padding="10dp">
+
+                </TextView>
+
+                <ListView
+                    android:id="@+id/dropLocationListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/white"
+                    android:backgroundTint="@android:color/white"
+                    android:divider="@null"
+                    tools:listitem="@layout/drop_location_layout">
+
+                </ListView>
+
             </LinearLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextDropLocation1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/line1"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="2dp"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addMultipleLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/lay1"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/border_grey"
-                android:drawableStart="@drawable/ic_location_searching_black_24dp"
-                android:drawableLeft="@drawable/ic_location_searching_black_24dp"
-                android:drawablePadding="10dp"
-                android:drawableTint="@color/colorPrimary"
-                android:hint="Select Drop Location"
-                android:padding="10dp">
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Add Multiple Location">
 
-            </com.google.android.material.textfield.TextInputEditText>
-        </LinearLayout>
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_below="@id/lay1"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="15dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="Add Multiple Location">
-
-        </com.google.android.material.button.MaterialButton>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lay1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="15dp"
-                android:text="Vehicle Type"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18sp"
-                android:textStyle="bold">
-
-            </TextView>
+            </com.google.android.material.button.MaterialButton>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/lay1"
+                android:orientation="vertical">
 
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/border_grey"
-                android:orientation="horizontal"
-                android:padding="5dp"
-                android:weightSum="3">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Vehicle Type"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/bike"
-                        android:tint="@color/color_orange_1">
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/border_grey"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="3">
 
-                    </ImageView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:text="Bike"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                        android:textStyle="bold">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/bike"
+                            android:tint="@color/color_orange_1">
 
-                    </TextView>
+                        </ImageView>
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Bike"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/weight_8kg">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/weight_8kg">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    </TextView>
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/car"
+                            android:tint="@color/color_orange_1">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                        </ImageView>
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/car"
-                        android:tint="@color/color_orange_1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Car"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
 
-                    </ImageView>
+                            android:textStyle="bold">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/weight_20kg">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:text="Car"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                        android:textStyle="bold">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/truck"
+                            android:tint="@color/color_orange_1">
 
-                    </TextView>
+                        </ImageView>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/weight_20kg">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Truck"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
 
-                    </TextView>
-                </LinearLayout>
+                            android:textStyle="bold">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                        </TextView>
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/truck"
-                        android:tint="@color/color_orange_1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/weight__20kg">
 
-                    </ImageView>
+                        </TextView>
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:text="Truck"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp"
-
-                        android:textStyle="bold">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/weight__20kg">
-
-                    </TextView>
                 </LinearLayout>
 
             </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 
-        </LinearLayout>
-    </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"

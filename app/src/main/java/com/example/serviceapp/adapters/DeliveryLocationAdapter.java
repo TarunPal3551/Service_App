@@ -2,7 +2,6 @@ package com.example.serviceapp.adapters;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,16 +11,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.serviceapp.OrderInfoActivity;
 import com.example.serviceapp.R;
 
 
-public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
+public class DeliveryLocationAdapter extends RecyclerView.Adapter<DeliveryLocationAdapter.ViewHolder> {
     Context mcontext;
     private View.OnClickListener mOnItemClickListener;
 
 
-    public HistoryAdapter(Context mcontext) {
+    public DeliveryLocationAdapter(Context mcontext) {
 
         this.mcontext = mcontext;
 
@@ -29,24 +27,17 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView textViewMore;
+        public TextView textView;
         public ImageView imgCardView;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             //   imgCardView = itemView.findViewById(R.id.itemImage);
-            textViewMore = itemView.findViewById(R.id.textViewMore);
+          //  textView = itemView.findViewById(R.id.tvcardView);
 
             itemView.setTag(this);
             itemView.setOnClickListener(mOnItemClickListener);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mcontext, OrderInfoActivity.class);
-                    mcontext.startActivity(intent);
-                }
-            });
 
 
         }
@@ -59,7 +50,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.history_item, parent, false);
+                .inflate(R.layout.order_location_item, parent, false);
         ViewHolder viewHolder = new ViewHolder(v);
         return viewHolder;
     }
@@ -72,15 +63,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 //                .into(holder.imgCardView);
 
       //  holder.textView.setText(names.get(position));
-        holder.textViewMore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mcontext, OrderInfoActivity.class);
-                mcontext.startActivity(intent);
-            }
-
-        });
-
 
 
     }
@@ -92,7 +74,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return 15;
+        return 5;
     }
 
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/editTextPickUpLocatio"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/rectange_top_corners"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/editTextDropLocation1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/border_grey"
+        android:drawableStart="@drawable/ic_location_searching_black_24dp"
+        android:drawableLeft="@drawable/ic_location_searching_black_24dp"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Drop Location"
+        android:textColor="#CCCCCC"
+
+        >
+
+    </TextView>
+
+</LinearLayout>
